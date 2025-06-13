@@ -32,8 +32,9 @@ html{
 
 
 header{
+    width: 100%;
     display: flex;
-    position: absolute;
+    position: sticky;
     top: 0;
     right: 0;
     left: 0;

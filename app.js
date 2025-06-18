@@ -7,6 +7,12 @@ const sideBar = document.querySelector('.sidebar');
 const menu = document.querySelector('.menu-icon');
 const closeIcon = document.querySelector('.close-icon')
 
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
+
+
+
 
 const hoverSign = document.querySelector('.hover-sign');
 

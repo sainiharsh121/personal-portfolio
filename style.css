@@ -448,7 +448,7 @@ header ul a:hover{
 }
 
 .AI-ML{
-    position: static;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -470,7 +470,7 @@ header ul a:hover{
 
 
 .coder{
-   position: static;
+   position: absolute;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -490,7 +490,7 @@ header ul a:hover{
 .slider{
     position: absolute;
     bottom: 5%;
-    right: 30%;
+    right: 23%;
     width: 60%;
     height: var(--height);
     overflow: hidden;
@@ -986,12 +986,12 @@ header ul a:hover{
         max-width: 300px;
     }
 
-    .Designer{
+    .AI-ML{
         top: 15%;
         left: 18%;
     }
 
-    .Designer h1{
+    .AI-ML h1{
         margin-bottom: 0;
         margin-top: 70px;
     }
@@ -1102,6 +1102,7 @@ header ul a:hover{
         height: 120vh;
         margin-right: 30px;
     }
+    
 
     .slider{
         bottom: 0%;

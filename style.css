@@ -159,6 +159,75 @@ header ul a:hover{
     text-shadow: 0 0 15px black;
 }
 
+
+
+nav {
+  display: none;
+}
+
+/* Show nav on desktop */
+@media (min-width: 768px) {
+  nav {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+  .menu-icon {
+    display: none;
+  }
+}
+
+/* Mobile navigation */
+.mobile-nav {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 69, 0.8);
+  backdrop-filter: blur(8px);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+}
+
+.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.mobile-nav li {
+  list-style: none;
+}
+
+.mobile-nav a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  transition: 0.3s;
+}
+
+.mobile-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-shadow: 0 0 10px black;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+
 .box-icons{
     display: flex;
     align-items: center;

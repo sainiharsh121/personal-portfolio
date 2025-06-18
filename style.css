@@ -112,7 +112,7 @@ header{
     z-index: 9999;
 }
 header.shrink {
-    width: 90vw;
+    width: 85vw;
     border-radius: 15px;
 }
 

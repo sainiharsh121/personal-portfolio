@@ -10,6 +10,69 @@ html{
     scroll-behavior: smooth;
 }
 
+
+
+
+/* === Galaxy Loader === */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(#0a0a0a, #000);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #4f88d4;
+  font-family: 'Segoe UI', sans-serif;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.orbit {
+  width: 80px;
+  height: 80px;
+  border: 2px solid rgba(79, 136, 212, 0.2);
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 2s linear infinite;
+  box-shadow: 0 0 12px #4f88d4;
+  margin-bottom: 16px;
+}
+
+.planet {
+  width: 20px;
+  height: 20px;
+  background: #4f88d4;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px #4f88d4, 0 0 16px #4f88d4;
+}
+
+#loader p {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loaded #loader {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
 .container{
     position: relative;
     width: 100%;
@@ -49,7 +112,7 @@ header{
     z-index: 9999;
 }
 header.shrink {
-    width: 90vw;
+    width: 85vw;
     border-radius: 15px;
 }
 
@@ -76,6 +139,7 @@ header ul{
 header ul li{
     list-style: none;
     padding: 10px 10px;
+    margin: 0 20px;
     font-size: 14px;
     border-radius: 40px;
     background-color: rgba(0, 0, 69, 0.326);
@@ -88,12 +152,81 @@ header ul a{
     color: white;
     font-weight: 700;
     transition: 0.3s;
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 header ul a:hover{
     text-shadow: 0 0 15px black;
 }
+
+
+
+nav {
+  display: none;
+}
+
+/* Show nav on desktop */
+@media (min-width: 768px) {
+  nav {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+  .menu-icon {
+    display: none;
+  }
+}
+
+/* Mobile navigation */
+.mobile-nav {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 69, 0.8);
+  backdrop-filter: blur(8px);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+}
+
+.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.mobile-nav li {
+  list-style: none;
+}
+
+.mobile-nav a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  transition: 0.3s;
+}
+
+.mobile-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-shadow: 0 0 10px black;
+}
+
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
 
 .box-icons{
     display: flex;

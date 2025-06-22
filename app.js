@@ -7,6 +7,17 @@ const sideBar = document.querySelector('.sidebar');
 const menu = document.querySelector('.menu-icon');
 const closeIcon = document.querySelector('.close-icon')
 
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
+
+
+    function toggleMenu() {
+    const nav = document.getElementById('mobileNav');
+    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+
 
 const hoverSign = document.querySelector('.hover-sign');
 
@@ -22,6 +33,11 @@ videoList.forEach (function(video){
     hoverSign.classList.remove("active")
 })
 })
+
+
+
+
+
 
 // Sidebar elements //
 menu.addEventListener("click", function(){

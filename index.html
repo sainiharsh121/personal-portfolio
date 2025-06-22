@@ -20,27 +20,37 @@
 </head>
 
 <body>
+
+
+<div id="loader">
+  <div class="orbit">
+    <div class="planet"></div>
+  </div>
+  <p>Loading Portfolio...</p>
+</div>
+
+
     <div class="container">
         <video class="back-vid" autoplay loop muted plays-inline src="videos/galaxy.mp4"></video>
 
+        
+            <header data-aos="fade-down" data-aos-duration="2000">
+                <div class="left">
+                    <img src="images/Screenshot 2025-05-26 120028.png" logo>
+                    <h2><span style="color: #4f88d4bb;">Harsh</span>saini</h2>
+                </div>
 
-        <header data-aos="fade-down" data-aos-duration="2000">
-            <div class="left">
-                <img src="images/Screenshot 2025-05-26 120028.png" logo>
-                <h2><span style="color: #4f88d4bb;">Harsh</span>saini</h2>
-            </div>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
 
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Projects</a></li>
-            </ul>
-
-            <div class="menu-icon">
-                <i class='bx bx-menu'></i>
-            </div>
-        </header>
-
+                <div class="menu-icon">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </header>
+         
 
 
         <div class="sidebar">
@@ -66,7 +76,7 @@
             <video autoplay loop muted plays-inline src="videos/139689-773418069.mp4"></video>
         </div>
 
-        <section class="hero ">
+        <section class="hero  ">
             <div class="hero-info autoBlur" data-aos="fade-right" data-aos-duration="1000">
                 <div class="hero-info-title">
                     <i class='bx bxl-sketch ' style="width: 30px; font-size: 22px;"></i>
@@ -79,7 +89,7 @@
                 <p>Skilled in building dynamic web, mobile, and software solutions with a focus on performance and user
                     experience.</p>
 
-                <button><i class='bx bx-send'></i> Contact Me</button>
+                <a href="#contact"><button><i class='bx bx-send'></i> Contact Me</button></a>
             </div>
 
             <div class="skills-video-box ">
@@ -90,7 +100,7 @@
             <div class="scroll-down"></div>
         </section>
 
-        <seaction class="info-section">
+        <seaction id="about" class="info-section ">
             <h1 class="section-title autoDisplay">Hello,<span class="gradient">There</span>👋</h1>
             <div class="info-cards">
                 <div class="card ">
@@ -131,7 +141,7 @@
 
 
 
-        <section class="skills-section">
+        <section id="skills" class="skills-section">
             <h1 class="section-title autoDisplay">
                 My Skills
             </h1>
@@ -172,7 +182,7 @@
             </div>
         </section>
 
-        <section class="contact-section ">
+        <section id="contact" class="contact-section ">
             <h1 class="section-title autoDisplay">Let's <span class="gradient">talk</span> 😊</h1>
 
             <div class="social-box autoBlur">

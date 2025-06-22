@@ -9,27 +9,9 @@
     <link rel="shortcut icon" href="images/Screenshot 2025-05-26 120028.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  (function () {
-    emailjs.init("j1yG-hYTwdso76RoA");
-  })();
-</script>
-
 </head>
 
 <body>
-
-
-<div id="loader">
-  <div class="orbit">
-    <div class="planet"></div>
-  </div>
-  <p>Loading Portfolio...</p>
-</div>
-
-
     <div class="container">
         <video class="back-vid" autoplay loop muted plays-inline src="videos/galaxy.mp4"></video>
 
@@ -76,7 +58,7 @@
             <video autoplay loop muted plays-inline src="videos/139689-773418069.mp4"></video>
         </div>
 
-        <section class="hero  ">
+        <section class="hero ">
             <div class="hero-info autoBlur" data-aos="fade-right" data-aos-duration="1000">
                 <div class="hero-info-title">
                     <i class='bx bxl-sketch ' style="width: 30px; font-size: 22px;"></i>
@@ -89,7 +71,7 @@
                 <p>Skilled in building dynamic web, mobile, and software solutions with a focus on performance and user
                     experience.</p>
 
-                <a href="#contact"><button><i class='bx bx-send'></i> Contact Me</button></a>
+                <button><i class='bx bx-send'></i> Contact Me</button>
             </div>
 
             <div class="skills-video-box ">
@@ -100,7 +82,7 @@
             <div class="scroll-down"></div>
         </section>
 
-        <seaction id="about" class="info-section ">
+        <seaction class="info-section">
             <h1 class="section-title autoDisplay">Hello,<span class="gradient">There</span>👋</h1>
             <div class="info-cards">
                 <div class="card ">
@@ -141,28 +123,29 @@
 
 
 
-        <section id="skills" class="skills-section">
+        <section class="skills-section">
             <h1 class="section-title autoDisplay">
                 My Skills
             </h1>
             <div class="skills-box autoDisplay">
                 <img class="skills-image" src="images/digital brain (2).png" alt="">
+                
+                    <div class="AI-ML">
+                        <h1 class="gradient">AI ML skills <i class='bx bx-laptop'></i></h1>
+                        <p>Libraries/Frameworks: NumPy, Pandas, Matplotlib, <br>Scikit-learn, OpenCV <br>
+                            Concepts: Supervised & Unsupervised Learning,<br> Regression, Classification, Neural
+                            Networks
+                        </p>
+                    </div>
 
-                <div class="AI-ML">
-                    <h1 class="gradient">AI ML skills <i class='bx bx-laptop'></i></h1>
-                    <p>Libraries/Frameworks: NumPy, Pandas, Matplotlib, <br>Scikit-learn, OpenCV <br>
-                        Concepts: Supervised & Unsupervised Learning,<br> Regression, Classification, Neural
-                        Networks
-                    </p>
-                </div>
-
-                <div class="coder">
-                    <h1 class="gradient">Coder <i class='bx bx-code-block'></i></h1>
-                    <p>I’m skilled in Programming Languages: C++, Python, JavaScript, SQL. I also have experience
-                        Tools & Platforms: Git, GitHub, VS Code with database management using MongoDB and MySQL.
-                    </p>
-                </div>
-                <div class="slider" reverse="true" style="
+                    <div class="coder">
+                        <h1 class="gradient">Coder <i class='bx bx-code-block'></i></h1>
+                        <p>I’m skilled in Programming Languages: C++, Python, JavaScript, SQL. I also have experience
+                            Tools & Platforms: Git, GitHub, VS Code with database management using MongoDB and MySQL.
+                        </p>
+                    </div>
+                <div 
+                class="slider" reverse="true" style="
                 --width: 80px;
                 --height: 80px;
                 --quantity: 8;
@@ -182,7 +165,7 @@
             </div>
         </section>
 
-        <section id="contact" class="contact-section ">
+        <section class="contact-section ">
             <h1 class="section-title autoDisplay">Let's <span class="gradient">talk</span> 😊</h1>
 
             <div class="social-box autoBlur">
@@ -198,22 +181,22 @@
                 </div>
             </div>
 
-            <div class="contact-box autoBlur">
+<div class="contact-box autoBlur">
+<form id="contact-form">
+  <p>Full Name</p>
+  <input type="text" name="user_name" placeholder="Your Full Name" required />
 
+  <p>Email Address</p>
+  <input type="email" name="user_email" placeholder="Your Email" required />
 
-                <p>Full Name</p>
-                <input id="name" type="text" placeholder="Your Name" />
+  <p>Your Message</p>
+  <input type="text" name="message" class="input-message" placeholder="Share your thoughts..." required />
 
+  <button type="submit">Send Message <i class='bx bx-mail-send'></i></button>
+</form>
 
-                <p>Email Address</p>
-                <input id="email" type="email" placeholder="Your Email" />
+</div>
 
-                <p>Your Message</p>
-                <input id="message" type="text" placeholder="Your Message" />
-
-                <button id="sendBtn">Send Message</button> 
-
-            </div>
 
         </section>
 
@@ -233,47 +216,21 @@
 
 
     </div>
-    <script  src="app.js"></script>
+<!-- Load EmailJS library -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script src="app.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
         window.addEventListener("scroll", function () {
-            const header = document.querySelector("header");
-            if (window.scrollY > 10) {
-                header.classList.add("shrink");
-            } else {
-                header.classList.remove("shrink");
-            }
-        });
-    </script>
-        <script type="module">
-  import emailjs from 'https://cdn.emailjs.com/dist/email.min.mjs';
-
-  emailjs.init("j1yG-hYTwdso76RoA");
-
-  // Add event listener AFTER DOM is loaded
-  const btn = document.getElementById("sendBtn");
-  btn.addEventListener("click", function () {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-
-    emailjs.send("service_h03ljtu", "template_kxoi85h", {
-      name,
-      email,
-      message,
-      time: new Date().toLocaleString(),
-      title: "New Contact Request",
-    }).then(
-      () => alert("✅ Message sent successfully!"),
-      (error) => {
-        alert("❌ Failed to send message.");
-        console.error("EMAILJS ERROR", error);
-      }
-    );
+    const header = document.querySelector("header");
+    if (window.scrollY > 10) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
   });
-</script>
-
+    </script>
 </body>
 
 </html>

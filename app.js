@@ -7,17 +7,6 @@ const sideBar = document.querySelector('.sidebar');
 const menu = document.querySelector('.menu-icon');
 const closeIcon = document.querySelector('.close-icon')
 
-  window.addEventListener("load", () => {
-    document.body.classList.add("loaded");
-  });
-
-
-    function toggleMenu() {
-    const nav = document.getElementById('mobileNav');
-    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-  }
-
-
 
 const hoverSign = document.querySelector('.hover-sign');
 
@@ -33,11 +22,6 @@ videoList.forEach (function(video){
     hoverSign.classList.remove("active")
 })
 })
-
-
-
-
-
 
 // Sidebar elements //
 menu.addEventListener("click", function(){
@@ -67,3 +51,27 @@ Object.keys(socialLinks).forEach(id => {
         });
     }
 });
+
+
+
+// EmailJS integration
+  
+
+
+  window.addEventListener("DOMContentLoaded", () => {
+    emailjs.init("j1yG-hYTwdso76RoA"); // Replace with your EmailJS Public Key
+
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_h03ljtu", "template_kxoi85h", this) // Replace with your actual IDs
+        .then(() => {
+          alert("✅ Message sent successfully!");
+          form.reset(); // clear the form
+        }, (error) => {
+          alert("❌ Failed to send message.\n\n" + JSON.stringify(error));
+        });
+    });
+  });

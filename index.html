@@ -181,20 +181,22 @@
                 </div>
             </div>
 
-            <div class="contact-box autoBlur">
+<div class="contact-box autoBlur">
+<form id="contact-form">
+  <p>Full Name</p>
+  <input type="text" name="user_name" placeholder="Your Full Name" required />
 
+  <p>Email Address</p>
+  <input type="email" name="user_email" placeholder="Your Email" required />
 
-                <p>Full Name</p>
-                <input placeholder="Your Full name" type="full name">
+  <p>Your Message</p>
+  <input type="text" name="message" class="input-message" placeholder="Share your thoughts..." required />
 
-                <p>Email Address</p>
-                <input placeholder="Your Email" type="Contact">
+  <button type="submit">Send Message <i class='bx bx-mail-send'></i></button>
+</form>
 
-                <p>Your Message</p>
-                <input class="input-message" type="contact" placeholder="shaire your thoughts...">
+</div>
 
-                <button>Send Message <i class='bx bx-mail-send'></i></button>
-            </div>
 
         </section>
 
@@ -214,6 +216,8 @@
 
 
     </div>
+<!-- Load EmailJS library -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
     <script src="app.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

@@ -51,3 +51,27 @@ Object.keys(socialLinks).forEach(id => {
         });
     }
 });
+
+
+
+// EmailJS integration
+  
+
+
+  window.addEventListener("DOMContentLoaded", () => {
+    emailjs.init("j1yG-hYTwdso76RoA"); // Replace with your EmailJS Public Key
+
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_h03ljtu", "template_kxoi85h", this) // Replace with your actual IDs
+        .then(() => {
+          alert("✅ Message sent successfully!");
+          form.reset(); // clear the form
+        }, (error) => {
+          alert("❌ Failed to send message.\n\n" + JSON.stringify(error));
+        });
+    });
+  });

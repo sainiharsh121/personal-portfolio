@@ -218,6 +218,28 @@
     </div>
 <!-- Load EmailJS library -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+
+<!-- EmailJS logic -->
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    emailjs.init("j1yG-hYTwdso76RoA"); // Replace with your EmailJS Public Key
+
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_h03ljtu", "template_kxoi85h", this) // Replace with your actual IDs
+        .then(() => {
+          alert("✅ Message sent successfully!");
+          form.reset(); // clear the form
+        }, (error) => {
+          alert("❌ Failed to send message.\n\n" + JSON.stringify(error));
+        });
+    });
+  });
+</script>
+
     <script src="app.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

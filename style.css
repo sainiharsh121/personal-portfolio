@@ -1287,7 +1287,10 @@ nav {
     }
     #project-section p {
         font-size: 12px;
-        bottom: 5px;
+        bottom: 9%;
+        right: 7%;
+
+
     }
     .contact-section .section-title {
         top: -30px;

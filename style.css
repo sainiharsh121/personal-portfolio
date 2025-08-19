@@ -994,7 +994,9 @@ nav {
 
 @media screen and (max-width: 1200px){
 
-    
+    .header ul{
+        width: auto;
+    }
     .blackhole-box video{
         margin-top: -20%;
     }

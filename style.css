@@ -441,6 +441,28 @@ nav {
     border-radius: 20px;
     transition: 0.5s;
 }
+.card-1{
+   display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    position: relative;
+    width: 40vw;
+    height: 40vh;
+    overflow: hidden;
+    border: 1px solid gray;
+    background-color: #080020b7;
+    border-radius: 20px;
+    transition: 0.5s; 
+}
+.card-1 h1{
+ position: absolute;
+    margin: 0;
+    bottom: 40%;
+    left: 5%;
+    font-size: 25px;
+    z-index: 1;
+    color: lightgray;
+}
 
 .card h1{
     position: absolute;
@@ -450,6 +472,17 @@ nav {
     font-size: 25px;
     z-index: 1;
     color: lightgray;
+}
+.card-1 p{
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    z-index: 1;
+    max-width: 300px;
+    color: gray;
+    font-size: 15px;
+    line-height: 20px;
+    
 }
 
 .card p{

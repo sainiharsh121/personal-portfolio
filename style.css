@@ -129,9 +129,11 @@ header.shrink {
 
 header ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: auto;
     padding: 5px;
+    
+    
     
 
 }
@@ -139,7 +141,7 @@ header ul{
 header ul li{
     list-style: none;
     padding: 10px 10px;
-    margin: -5 10px;
+    margin: 5px;
     font-size: 14px;
     border-radius: 40px;
     background-color: rgba(0, 0, 69, 0.326);
@@ -1173,9 +1175,7 @@ nav {
         width: 70%;
     }
 
-    .section-title {
-        
-    }
+    
     .contact-section{
         flex-direction: column;
         margin-top: 100px;
@@ -1303,7 +1303,7 @@ nav {
     }
 
     .footer .box-icons{
-        gap: 10px;
+        gap: 8px;
     }
 
 

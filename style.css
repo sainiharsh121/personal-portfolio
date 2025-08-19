@@ -130,7 +130,7 @@ header.shrink {
 header ul{
     display: flex;
     justify-content: space-between;
-    width: 25%;
+    width: auto;
     padding: 5px;
     
 
@@ -993,6 +993,8 @@ nav {
 
 
 @media screen and (max-width: 1200px){
+
+    
     .blackhole-box video{
         margin-top: -20%;
     }
@@ -1126,72 +1128,52 @@ nav {
         margin-left: -50px;
     }
 
-    .project-info h1{
-        font-size: 20px;
-        max-width: 200px;
-        text-wrap: wrap;
+    #project-section h2{
+        font-size: 3vw;
     }
-
-    .project-info p{
-        font-size: 10px;
-        text-wrap: wrap;
-        max-width: 200px;
-        min-width: 0;
+    #project-section p{
+        font-size: 2.3vw;
     }
-
-    .project-info button{
-        padding: 5px 10px;
-    }
-
-    .my-project{
-        margin-bottom: 600px;
-    }
-
-    .project-card{
-        flex-direction: column;
-        margin-left: 25%;
-        gap: 30px;
-    }
-    
-    .project-vidbox{
-        min-width: 200px;
-    }
-
-    .project-info{
-        width: 85%;
-    }
-
-    .project-info h1{
-        text-wrap: nowrap;
-    }
-
-    .project-info p{
-        max-width: 300px;
+    #project-section .card-1{
+        width: 70vw;
     }
 
     .AI-ML{
-        top: 15%;
+        top: 18%;
         left: 18%;
     }
 
     .AI-ML h1{
         margin-bottom: 0;
         margin-top: 70px;
+        font-size: 3.7vw;
     }
 
+    .AI-ML  p{
+        font-size: 2.3vw;
+    }
     .coder{
         top: 50%;
         left: 18%;
+        
     }
 
     .coder h1{
         margin-bottom: 0;
+        font-size: 3.7vw;
+    }
+    
+    .coder p{
+        font-size: 2.3vw;
     }
 
     .slider .list .item img{
         width: 70%;
     }
 
+    .section-title {
+        
+    }
     .contact-section{
         flex-direction: column;
         margin-top: 100px;
@@ -1295,7 +1277,16 @@ nav {
         scale: 0.9;
         height: 120vh;
     }
-
+    #project-section h2{
+        font-size: 3.2vw;
+    }
+    #project-section .card-1 {
+        width: 70vw;
+    }
+    #project-section p {
+        font-size: 12px;
+        bottom: 5px;
+    }
     .contact-section .section-title {
         top: -30px;
         left: 25%;
